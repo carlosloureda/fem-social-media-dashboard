@@ -2,18 +2,43 @@ import React from "react";
 import { ThemeProvider } from "@emotion/react";
 import GlobalStyles from "./theme/globalStyles";
 import styled from "@emotion/styled";
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { lightTheme, darkTheme } from "./theme/theme";
 
-const H1 = styled.h1`
-  color: ${(props: any) => props.theme.colors.fontPrimary};
-`;
+import SocialMediaCard from "./components/molecules/SocialMediaCard";
 
-const Card = styled.div`
-  width: 200px;
-  height: 200px;
-  background-color: ${(props: any) => props.theme.colors.bgPrimary};
-  color: ${(props: any) => props.theme.colors.fontPrimary};
+const cards = [
+  {
+    type: "facebook",
+    username: "@nathanf",
+    followersCount: 1987,
+    todayFollowersCount: 12,
+  },
+  {
+    type: "twitter",
+    username: "@nathanf",
+    followersCount: 1044,
+    todayFollowersCount: 99,
+  },
+  {
+    type: "instagram",
+    username: "@realnathanf",
+    followersCount: 11022,
+    todayFollowersCount: 1099,
+  },
+  {
+    type: "youtube",
+    username: "Nathan F.",
+    followersCount: 8239,
+    todayFollowersCount: 144,
+  },
+];
+
+const SCardRow = styled.div`
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
 `;
 
 function App() {
@@ -27,8 +52,13 @@ function App() {
         <Switch>
           <Route exact path="/">
             <div>
-              <H1>Testing themes</H1>
-              <Card>This is a box</Card>
+              <h1>Testing themes</h1>
+              <SCardRow>
+                {cards &&
+                  cards.map((card) => (
+                    <SocialMediaCard key={card.type} data={card} />
+                  ))}
+              </SCardRow>
               <button onClick={() => setIsDarkTheme(!isDarkTheme)}>
                 Toggle Theme
               </button>

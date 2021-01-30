@@ -4,8 +4,9 @@ export const colors = {
     brightRed: "#dc414c",
     facebook: "#198ff5",
     twitter: "#1ca0f2",
-    instagram: "linear-gradient(#fdc468, #df4996)",
-    youTube: "#c4032a",
+    instagram:
+      "linear-gradient(225deg, #df4896 0%, #ee877e 50.91%, #fdc366 100%);",
+    youtube: "#c4032a",
     font: "#1D1F29",
   },
   dark: {
