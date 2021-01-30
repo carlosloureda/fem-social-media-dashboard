@@ -6,6 +6,7 @@ export const colors = {
     twitter: "#1ca0f2",
     instagram: "linear-gradient(#fdc468, #df4996)",
     youTube: "#c4032a",
+    font: "#1D1F29",
   },
   dark: {
     veryDarkBlue1: "#1e202a",
@@ -14,6 +15,8 @@ export const colors = {
     desaturatedBlue: "#8b97c6",
     white: "#ffffff",
     toggle: "linear gradient(#378fe6, #3eda82)",
+    font: "#1D1F29",
+    cardGrey: "#333A55",
   },
   light: {
     white: "#ffffff",
@@ -22,6 +25,7 @@ export const colors = {
     darkGrayishBlue: "#63687e",
     veryDarkBlue: "#1e202a",
     toggle: "#aeb3cb",
+    cardGrey: "#F1F3FA",
   },
 };
 
@@ -38,7 +42,9 @@ export const breakpoints = {
 export const fonts = {
   defaultFontSize: "1rem", //TODO:
   hugeFontSize: "1.4rem", //overview and headings
-  family: "Inter", // https://fonts.google.com/specimen/Inter, weights: 400, 700
+  family: "Inter",
+  url:
+    "https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap",
   weightNormal: 400,
   weightBold: 700,
 };
