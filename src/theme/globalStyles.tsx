@@ -14,7 +14,8 @@ const GlobalStyles = () => {
           padding: 0;
           box-sizing: inherit;
           font-family: ${theme.fonts.family}, sans-serif;
-          /* line-height: 26px; */
+          font-size: ${theme.fonts.defaultFontSize};
+          line-height: ${theme.fonts.defaultLineHeight};
         }
         body {
           box-sizing: border-box;
@@ -22,6 +23,7 @@ const GlobalStyles = () => {
           width: 100%;
           height: 100vh;
           background-color: ${theme.colors.bgPrimary || "white"};
+          /* color: ${theme.colors.primaryFont || "black"}; */
         }
 
         html {

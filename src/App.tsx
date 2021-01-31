@@ -31,7 +31,7 @@ const cards = [
     type: "youtube",
     username: "Nathan F.",
     followersCount: 8239,
-    todayFollowersCount: 144,
+    todayFollowersCount: -144,
   },
 ];
 

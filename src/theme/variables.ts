@@ -17,16 +17,24 @@ export const colors = {
     white: "#ffffff",
     toggle: "linear gradient(#378fe6, #3eda82)",
     font: "#1D1F29",
-    cardGrey: "#333A55",
+    cardBackground: "#252B42",
+    primaryFont: "#8C98C6",
+    fontSecondary: "#ffffff",
+    // primaryFont: "#fff",
+    lightBlueGrey: "#333A55",
   },
   light: {
     white: "#ffffff",
     veryPaleBlue: "#f5f7ff",
     lightGrayishBlue: "#f0f2fa",
     darkGrayishBlue: "#63687e",
+    darkGrey: "#E1E4F0",
     veryDarkBlue: "#1e202a",
     toggle: "#aeb3cb",
-    cardGrey: "#F1F3FA",
+    cardBackground: "#F1F3FA",
+    // primaryFont: "#63687d",
+    primaryFont: "#63687d",
+    fontSecondary: "#1D1F29",
   },
 };
 
@@ -41,7 +49,8 @@ export const breakpoints = {
 };
 
 export const fonts = {
-  defaultFontSize: "1rem", //TODO:
+  defaultFontSize: "1.2rem",
+  defaultLineHeight: "1.5rem",
   hugeFontSize: "1.4rem", //overview and headings
   family: "Inter",
   url:

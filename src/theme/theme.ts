@@ -15,8 +15,10 @@ const primaryColors = {
 export const lightTheme: iTheme = {
   colors: {
     bgPrimary: colors.light.white,
-    bgSecondary: colors.light.cardGrey,
-    fontPrimary: colors.light.darkGrayishBlue,
+    bgSecondary: colors.light.cardBackground,
+    bgTertiary: colors.light.darkGrey,
+    fontPrimary: colors.light.primaryFont,
+    fontSecondary: colors.light.fontSecondary,
     primary: colors.light.veryPaleBlue,
     ...primaryColors,
   },
@@ -26,8 +28,10 @@ export const lightTheme: iTheme = {
 export const darkTheme: iTheme = {
   colors: {
     bgPrimary: colors.dark.veryDarkBlue2,
-    bgSecondary: colors.light.cardGrey,
-    fontPrimary: colors.dark.font,
+    bgSecondary: colors.dark.cardBackground,
+    bgTertiary: colors.dark.lightBlueGrey,
+    fontPrimary: colors.dark.primaryFont,
+    fontSecondary: colors.dark.fontSecondary,
     primary: colors.dark.desaturatedBlue,
     ...primaryColors,
   },
