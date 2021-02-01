@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-import SocialIcon from "../atoms/socialIcon";
+import SocialIcon from "../atoms/SocialIcon";
 import iconDown from "../../images/icon-down.svg";
 import iconUp from "../../images/icon-up.svg";
 

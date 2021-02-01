@@ -35,6 +35,7 @@ export const colors = {
     // primaryFont: "#63687d",
     primaryFont: "#63687d",
     fontSecondary: "#1D1F29",
+    separatorColor: "#848bab",
   },
 };
 
