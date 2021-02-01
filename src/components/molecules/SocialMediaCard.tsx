@@ -23,7 +23,6 @@ interface iProps {
 const SCard = styled.div<any>`
   width: 25.5rem;
   height: 21.6rem;
-  margin-right: 4rem;
   border-radius: 5px;
   overflow: hidden;
   display: flex;

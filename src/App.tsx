@@ -19,18 +19,27 @@ S.CardRow = styled.div`
   display: flex;
   width: 100%;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3.2rem;
+  gap: 3rem;
+
+  @media (max-width: ${breakpoints.mobileSmall}) {
+    margin: 0;
+  }
 `;
 
 S.DashBoardHeader = styled.section<any>`
   padding: 3.6rem 0;
-
   /* Desktop approach */
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
+  max-width: 112rem;
 
   @media (max-width: ${breakpoints.mobileSmall}) {
     flex-direction: column;
     padding: 3.6rem 2.5rem;
+    margin: 0;
   }
 
   .heading {
@@ -140,13 +149,13 @@ function App() {
                     <SocialMediaCard key={card.platform} data={card} />
                   ))}
               </S.CardRow>
-              <h2>Overview - Today</h2>
+              {/* <h2>Overview - Today</h2>
               <div>
                 {todayOverViewCardsData &&
                   todayOverViewCardsData.map((card) => (
                     <TodayOverviewCard key={card.id} data={card} />
                   ))}
-              </div>
+              </div> */}
             </div>
           </Route>
         </Switch>
