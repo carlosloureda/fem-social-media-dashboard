@@ -15,7 +15,7 @@ export const colors = {
     darkDesaturatedBlue: "#252a41",
     desaturatedBlue: "#8b97c6",
     white: "#ffffff",
-    toggle: "linear gradient(#378fe6, #3eda82)",
+    toggle: "linear-gradient(225deg, #40DB82 0%, #388FE7 98.02%)",
     font: "#1D1F29",
     cardBackground: "#252B42",
     primaryFont: "#8C98C6",

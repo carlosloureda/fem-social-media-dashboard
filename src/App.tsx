@@ -8,6 +8,7 @@ import { lightTheme, darkTheme } from "./theme/theme";
 
 import SocialMediaCard from "./components/molecules/SocialMediaCard";
 import TodayOverviewCard from "./components/molecules/TodayOverviewCard";
+import ChipButton from "./components/atoms/ChipButton";
 
 import { cardsData, todayOverViewCardsData } from "./mocks/data";
 
@@ -65,6 +66,10 @@ S.DashBoardHeader = styled.section<any>`
     }
   }
   .toggle {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+
     @media (max-width: ${breakpoints.mobileSmall}) {
       display: flex;
       justify-content: space-between;
@@ -75,6 +80,9 @@ S.DashBoardHeader = styled.section<any>`
       font-size: 1.4rem;
       line-height: 1.7rem;
       font-weight: bold;
+      @media (min-width: ${breakpoints.mobileSmall}) {
+        margin-right: 1.3rem;
+      }
     }
   }
 `;
@@ -121,12 +129,9 @@ function App() {
                 <div className="separator"></div>
                 <div className="toggle">
                   <span className="toggle__label">Dark Mode</span>
-                  <button
-                    className="toggle__btn"
+                  <ChipButton
                     onClick={() => setIsDarkTheme(!isDarkTheme)}
-                  >
-                    Toggle
-                  </button>
+                  ></ChipButton>
                 </div>
               </S.DashBoardHeader>
               <S.CardRow>
