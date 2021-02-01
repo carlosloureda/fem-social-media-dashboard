@@ -7,33 +7,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { lightTheme, darkTheme } from "./theme/theme";
 
 import SocialMediaCard from "./components/molecules/SocialMediaCard";
+import TodayOverviewCard from "./components/molecules/TodayOverviewCard";
 
-const cards = [
-  {
-    type: "facebook",
-    username: "@nathanf",
-    followersCount: 1987,
-    todayFollowersCount: 12,
-  },
-  {
-    type: "twitter",
-    username: "@nathanf",
-    followersCount: 1044,
-    todayFollowersCount: 99,
-  },
-  {
-    type: "instagram",
-    username: "@realnathanf",
-    followersCount: 11022,
-    todayFollowersCount: 1099,
-  },
-  {
-    type: "youtube",
-    username: "Nathan F.",
-    followersCount: 8239,
-    todayFollowersCount: -144,
-  },
-];
+import { cardsData, todayOverViewCardsData } from "./mocks/data";
 
 const SCardRow = styled.div`
   display: flex;
@@ -54,11 +30,17 @@ function App() {
             <div>
               <h1>Testing themes</h1>
               <SCardRow>
-                {cards &&
-                  cards.map((card) => (
-                    <SocialMediaCard key={card.type} data={card} />
+                {cardsData &&
+                  cardsData.map((card) => (
+                    <SocialMediaCard key={card.platform} data={card} />
                   ))}
               </SCardRow>
+              <div>
+                {todayOverViewCardsData &&
+                  todayOverViewCardsData.map((card) => (
+                    <TodayOverviewCard key={card.id} data={card} />
+                  ))}
+              </div>
               <button onClick={() => setIsDarkTheme(!isDarkTheme)}>
                 Toggle Theme
               </button>

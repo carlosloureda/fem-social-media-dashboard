@@ -10,7 +10,7 @@ import iconUp from "../../images/icon-up.svg";
 
 import { kFormatter } from "../../utils/formatters";
 interface iMediaData {
-  type: string;
+  platform: string;
   username: string;
   followersCount: number;
   todayFollowersCount: number;
@@ -49,8 +49,8 @@ const SCard = styled.div<any>`
     width: 100%;
     height: 4px;
     background: ${(props) =>
-      props.type
-        ? props.theme.colors[props.type]
+      props.platform
+        ? props.theme.colors[props.platform]
         : props.theme.colors.bgPrimary};
     position: absolute;
     top: 0;
@@ -110,20 +110,20 @@ const SCard = styled.div<any>`
 const SocialMediaCard: React.FC<iProps> = ({ data }) => {
   const isGrowing = data.todayFollowersCount > 0;
   let socialIcon = iconFacebook;
-  if (data.type === "instagram") {
+  if (data.platform === "instagram") {
     socialIcon = iconInstagram;
-  } else if (data.type === "twitter") {
+  } else if (data.platform === "twitter") {
     socialIcon = iconTwitter;
-  } else if (data.type === "youtube") {
+  } else if (data.platform === "youtube") {
     socialIcon = iconYoutube;
   }
 
   return (
-    <SCard type={data.type}>
+    <SCard platform={data.platform}>
       <div className="border"></div>
       {/* TODO: logo */}
       <div className="username">
-        <img className="username__icon" src={socialIcon} alt="Facebook" />
+        <img className="username__icon" src={socialIcon} alt={data.platform} />
         <span className="username__text">{data.username}</span>
       </div>
       <div className="followers">
