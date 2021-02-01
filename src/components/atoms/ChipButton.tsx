@@ -31,18 +31,22 @@ const SChipButton = styled.button<any>`
     }
   }
 
-  &:hover {
-    cursor: pointer;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      cursor: pointer;
 
-    /* FIXME: This is "variable" dependant instead of theme, but is was very tricky. */
-    &.off {
-      background: ${colors.dark.toggle};
+      /* FIXME: This is "variable" dependant instead of theme, but is was very tricky. */
+      &.off {
+        background: ${colors.dark.toggle};
+      }
     }
   }
 
-  &:hover .chip {
-    &.on {
-      background-color: #333a55;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover .chip {
+      &.on {
+        background-color: #333a55;
+      }
     }
   }
 
